@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6731c3c1163bb544c9ee99b07a207a8a, type: 3}
+  m_Name: FateCards
+  m_EditorClassIdentifier: 
+  fateDraw:
+  - cup-5
+  - cup-2
+  - wand-3
+  - wand-5
+  - cup-3
+  - sword-1
+  - cup-1
+  - special-6
+  - special-4
+  currentFate:
+  - wand-1
+  - special-2
+  - special-5
+  fateDiscard:
+  - wand-6
+  - sword-2
+  - sword-5
+  - cup-6
+  - special-1
+  - special-3
+  - sword-3
+  - sword-6
+  - sword-4
+  - wand-2
+  - wand-4
+  - cup-4
+  fateValues: 010000000200000005000000
+  newFateCards: {fileID: 11400000, guid: 0c0e1b061c0d63b40b51ab2a769e305d, type: 2}
+  roundNum: 4
+  fateSum: 8
+  passCount: 3
+  cupRound: 0
+  swordRound: 0
+  wandRound: 1
+  magician: 0
+  tower: 1
+  fool: 0
+  judgment: 0
+  fortune: 1
+  death: 0

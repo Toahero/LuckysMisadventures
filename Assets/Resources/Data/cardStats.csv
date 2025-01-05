@@ -1,0 +1,54 @@
+Name,Type,Cost,VP,Power,Act. Fate,
+Clockwork Gizmo,Junk,3,1,0,N,0
+Reactor Pump,Junk,4,2,0,N,0
+Analog Encryptor,Junk,5,2,0,N,0
+Luminous Aether,Junk,6,3,0,N,0
+Flux Capacitor,Junk,9,5,0,N,0
+Creepy Doll Bot,Machine,0,6,0,N,0
+Tiny Tin,Machine,0,7,0,N,0
+Steam Golem,Machine,0,7,0,N,0
+Drigible,Machine,0,8,0,N,0
+Plasma Cannon,Machine,0,9,0,N,0
+Electro Brain,Machine,0,9,0,N,0
+Fate Clock,Machine,0,9,0,N,0
+Mech Dragon,Machine,0,10,0,N,0
+Time Machine,Machine,0,13,0,N,0
+Chronobot,Tinkerer,2,2,2,R,0
+Clockmakers,Tinkerer,1,1,2,N,0
+Clockwork Angel,Tinkerer,2,2,2,R,0
+Cyber Glinda,Tinkerer,3,3,3,B,0
+Marshall,Tinkerer,4,3,3,B,0
+Mr Bones,Tinkerer,4,3,1,R,0
+Relic Hunter,Tinkerer,4,2,2,B,0
+Stevepunk,Tinkerer,7,5,2,R,0
+The Junkman,Tinkerer,5,2,1,R,0
+Tinman,Tinkerer,0,0,1,N,0
+Alice,Wicked,2,2,2,B,0
+The Collector,Wicked,3,3,2,Y,0
+Despair,Wicked,2,2,1,R,0
+Greed,Wicked,6,2,1,Y,0
+Lion,Wicked,0,0,1,N,0
+Plague Doctors,Wicked,5,3,3,B,0
+Queen of Spades,Wicked,8,6,1,Y,0
+The Phantom,Wicked,2,4,3,B,0
+Vanity,Wicked,3,2,2,B,0
+Winged Monkey,Wicked,1,1,2,N,0
+The Caterpillar,Wildling,4,2,1,Y,0
+Charlie in the Box,Wildling,4,3,1,R,0
+Fate Beast,Wildling,2,2,2,Y,0
+Lucky-1,Wildling,0,10,1,N,0
+Lucky-2,Wildling,0,10,1,N,0
+Lucky-3,Wildling,0,10,1,N,0
+Lucky-4,Wildling,0,10,1,N,0
+Lucky-5,Wildling,0,10,1,N,0
+Lucky-6,Wildling,0,10,1,N,0
+Moonbeam,Wildling,7,5,2,Y,0
+Old Nomad,Wildling,5,2,1,Y,0
+Pumpkin Ted,Wildling,6,3,1,Y,0
+ScarecrowB,Wildling,0,0,1,B,0
+ScarecrowR,Wildling,0,0,1,R,0
+ScarecrowY,Wildling,0,0,1,Y,0
+Stormbringer,Wildling,3,3,2,R,0
+Worcestershire Cat,Wildling,2,2,2,R,0
+White Rabbit,Wildling,1,1,1,N,0
+Winkie Woddler,Wildling,3,3,1,Y,0

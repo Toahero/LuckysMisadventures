@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0db184552da9f45b85100bf4bbe5b9, type: 3}
+  m_Name: cardBanks
+  m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: 6db66048264a86a4ebdadf03428374e8, type: 2}
+  junkBankNames:
+  - Luminous Aether
+  - Flux Capacitor
+  - Reactor Pump
+  - Reactor Pump
+  - Analog Encryptor
+  mavenBankNames:
+  - Vanity
+  - Clockwork Angel
+  - Chronobot
+  - The Collector
+  - Chronobot
+  topHirelingName: Clockmakers
+  junkDisplayTrigger: {fileID: 11400000, guid: 2f0659930ddb559499bfd98e28617671, type: 2}
+  mavenDisplayTrigger: {fileID: 11400000, guid: 05a2ed1f80ab28f47b78213e67764f76, type: 2}
+  updateTopHireling: {fileID: 11400000, guid: 6764b10f060eb4244b23fd840fdf43bf, type: 2}
