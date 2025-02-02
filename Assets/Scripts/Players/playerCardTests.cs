@@ -18,17 +18,17 @@ public class playerCardTests : MonoBehaviour
 
     public void checkCards()
     {
-        playerSO currentPlayer = playerManager.GetPlayer(playerNum);
+        PlayerData currentPlayer = playerManager.GetPlayer(playerNum);
 
         cards = currentPlayer.getNames(deckToView);
     }
 
     public void testBuy()
-    {
-        playerSO currentPlayer = playerManager.GetPlayer(playerNum);
+    {/*
+        PlayerData currentPlayer = playerManager.GetPlayer(playerNum);
         testActions.player = currentPlayer;
         testActions.cardBanks = testDraw;
 
-        testActions.buyCard(cardDeck, cardLoc);
+        testActions.buyCard(cardDeck, cardLoc);*/
     }
 }

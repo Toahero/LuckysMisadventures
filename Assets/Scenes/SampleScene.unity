@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920840673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Console, Assembly-CSharp
         m_MethodName: nextPlayer
         m_Mode: 1
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920840673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Console, Assembly-CSharp
         m_MethodName: prevPlayer
         m_Mode: 1
@@ -2868,7 +2868,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920840673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Console, Assembly-CSharp
         m_MethodName: changeDeck
         m_Mode: 0
@@ -3423,7 +3423,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1920840673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Console, Assembly-CSharp
         m_MethodName: updateDeck
         m_Mode: 1
@@ -4194,7 +4194,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1920840673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Console, Assembly-CSharp
         m_MethodName: updateDeck
         m_Mode: 1
@@ -4700,15 +4700,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8850b98d72c38348bf1c4313ce6235e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tokenPlayer: 0
-  currentRound: 0
   fateScriptable: {fileID: 11400000, guid: 2687f64d3e8258644a7ae2a87e901b54, type: 2}
-  dataScriptable: {fileID: 11400000, guid: 6db66048264a86a4ebdadf03428374e8, type: 2}
   bankScriptable: {fileID: 11400000, guid: 7261ba007f222ea439ef0282ce5dfea1, type: 2}
   playerinator: {fileID: 1780921453}
   matchCreated: {fileID: 11400000, guid: 3633e021be754934aa2c0195b269d39d, type: 2}
+  newGame: 1
   numPlayers: 4
   startHirelings: 01000000020000000000000001000000
+--- !u!1 &1543868499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543868501}
+  - component: {fileID: 1543868500}
+  - component: {fileID: 1543868502}
+  m_Layer: 0
+  m_Name: playerBus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1543868500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543868499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9687abd3d52bad40be93be08419c9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consoleArr: []
+--- !u!4 &1543868501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543868499}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543868502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543868499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1d3e3540aa8d84d84b1ab6d0b238e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeckEvent: {fileID: 11400000, guid: e59da38a48831444a9573dc267a57a0f, type: 2}
+  updateAll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1555651900
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,7 +5922,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soPrefix: player
-  playerArray: []
   dataScriptable: {fileID: 0}
 --- !u!4 &1780921454
 Transform:
@@ -6358,87 +6417,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899557252}
   m_CullTransparentMesh: 1
---- !u!1 &1920840671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1920840672}
-  - component: {fileID: 1920840673}
-  - component: {fileID: 1920840674}
-  m_Layer: 0
-  m_Name: TestConsole
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1920840672
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920840671}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1920840673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920840671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81dcd989733af054497164cd86c9918d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roundinator: {fileID: 1517082808}
-  playerManager: {fileID: 1780921453}
-  displayPanel: {fileID: 933971029}
-  playerNum: 0
-  drawDeck: []
-  inHand: []
-  inPlay: []
-  discard: []
---- !u!114 &1920840674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920840671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a741075532b6f1e44a8ba234e4c8ce5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 3633e021be754934aa2c0195b269d39d, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1920840673}
-        m_TargetAssemblyTypeName: Console, Assembly-CSharp
-        m_MethodName: StartUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1934190557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7154,4 +7132,4 @@ SceneRoots:
   - {fileID: 1780921454}
   - {fileID: 1517082807}
   - {fileID: 267435719}
-  - {fileID: 1920840672}
+  - {fileID: 1543868501}

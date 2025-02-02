@@ -7,4 +7,6 @@ public static class constantInts
     public const int baseDrawSize = 5;
 
     public const int bankSize = 5;
+
+    public const int numLuckys = 7;
 }

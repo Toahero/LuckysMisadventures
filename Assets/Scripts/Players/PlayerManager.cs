@@ -8,15 +8,15 @@ public class PlayerManager : MonoBehaviour
 {
     public string soPrefix = "player";
     //set this to private later
-    public playerSO[] playerArray;
+    public PlayerData[] playerArray;
 
-     public CardDataSO dataScriptable;
+    public CardDataSO dataScriptable;
 
     public void generatePlayers(bool newGame, int numPlayers, hirelingChoice[] hirelingList)
     {
-        dataScriptable = Resources.Load<CardDataSO>("Data/CardStats");
+        dataScriptable = Resources.Load<CardDataSO>(constantStrings.cardDataLoc);
 
-        playerArray = new playerSO[numPlayers];
+        playerArray = new PlayerData[numPlayers];
         string playerName;
         
 
@@ -45,16 +45,9 @@ public class PlayerManager : MonoBehaviour
 	
 	public void newPlayer(int playerNum, string name, hirelingChoice hireling)
 	{
-        //Generate the player Scriptable Object, and set it's name
-		playerArray[playerNum] = ScriptableObject.CreateInstance<playerSO>();
-		playerArray[playerNum].name = name;
-
-        //set the data reference
-        playerArray[playerNum].cardData = dataScriptable;
-
-        //Generate a deck for the player SO, and set it to initial.
-        playerArray[playerNum].initializeDeck();
-		playerArray[playerNum].newDeck(hireling, 1);
+        int luckyChoice = 1;
+        //Generate the player objects
+        playerArray[playerNum] = new PlayerData(playerNum, true, hireling, luckyChoice);
 		
 	}
 
@@ -77,7 +70,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     //Basic Return functions
-    public playerSO GetPlayer(int playerNum)
+    public PlayerData GetPlayer(int playerNum)
     {
         int inRangeNum = playerNum % playerArray.Length;
         

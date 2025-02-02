@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class roundinator : MonoBehaviour
 {
-    
-    public int tokenPlayer = 0;
-    public int currentRound;
+    private int currentRound;
+
+    private int tokenPlayer = 0;
+    private int nextActivePlayer;
 
     private int cardsToPlay = 3;
 
     public fateSO fateScriptable;
-    public CardDataSO dataScriptable;
+    private CardDataSO dataScriptable;
     public cardDrawSO bankScriptable;
     
     public PlayerManager playerinator;
     public BasicEventSO matchCreated;
 
+    //TODO: Change this to allow starting mid-game.
+    public bool newGame = true;
 
     //These will be chosen by players at match start.
     public int numPlayers;
@@ -25,11 +28,16 @@ public class roundinator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dataScriptable = Resources.Load<CardDataSO>("Data/CardStats");
+        dataScriptable = Resources.Load<CardDataSO>(constantStrings.cardDataLoc);
         dataScriptable.setUpStats();
         initBanks();
-
-        playerinator.generatePlayers(true, numPlayers, startHirelings);
+        
+        if(newGame)
+        {
+            startNewGame(startHirelings);
+            startNewRound();
+        }
+        
         matchCreated.Raise();
     }
 
@@ -50,6 +58,7 @@ public class roundinator : MonoBehaviour
         //Uses the % function to figure out who gets the token next
         tokenPlayer = (tokenPlayer + passTimes) % numPlayers;
         Debug.Log("Player " + tokenPlayer + " has the token.");
+        nextActivePlayer = tokenPlayer;
 
         //Arcana are triggered in ascending fate value
         //Magician is handled by fateScriptable(sets wands/cups/swords to true, disables all others)
@@ -65,6 +74,15 @@ public class roundinator : MonoBehaviour
 
         //Trigger the play phase for all units
         playerinator.playPhase(cardsToPlay);
+    }
+
+    private void startNewGame(hirelingChoice[] hirelings)
+    {
+        currentRound = 0;
+        //Generate players with the default start, along with their choice of hirelings.
+        playerinator.generatePlayers(true, numPlayers, hirelings);
+        Debug.Log("Generating " + numPlayers + " players");
+        playerinator.drawPhase();
     }
 
     private void initBanks()
@@ -118,5 +136,5 @@ public class roundinator : MonoBehaviour
 
     public int getTokenPlayer() {  return tokenPlayer; }
 
-
+    public int getCurrentRound() {  return currentRound; }
 }
